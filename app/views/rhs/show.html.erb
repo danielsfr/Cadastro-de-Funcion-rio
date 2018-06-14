@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+<center><h2>Visualizar Pessoas</h2></center>
+<fieldset id="mostrar">
+<p>
+  <strong>Matrícula:</strong>
+  <%= @rh.Matricula %>
+
+  <strong>Nome:</strong>
+  <%= @rh.Nome %>
+
+ <strong>Nascimento:</strong>
+  <%= @rh.Nascimento %>
+
+  <strong>Municipio de nascimento:</strong>
+  <%= @rh.MunicipioDeNascimento %>
+</p>
+<p>
+  <strong>Estadode Nascimento:</strong>
+  <%= @rh.EstadoDeNascimento %>
+
+  <strong>Estado Civil:</strong>
+  <%= @rh.EstadoCivil %>
+
+    <strong>Sexo:</strong>
+  <%= @rh.Sexo %>
+</p>
+  <strong>Telefone:</strong>
+  <%= @rh.Telefone %>
+</p>
+<p>
+  <strong>Celular:</strong>
+  <%= @rh.Celular %>
+</p>
+<p>
+  <strong>Email:</strong>
+  <%= @rh.Email %>
+<p>
+  <strong>Lotacao de trabalho:</strong>
+  <%= @rh.LotacaoDeTrabalho %>
+</p>
+<p>
+  <strong>Cargo:</strong>
+  <%= @rh.Cargo %>
+</p>
+
+<%= link_to 'Edit', edit_rh_path(@rh) %> |
+<%= link_to 'Back', rhs_path %>
+</fieldset>

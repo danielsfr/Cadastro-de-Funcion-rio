@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  Matricula: MyString
+  Nome: MyString
+  Nascimento: 2018-05-27
+  MunicipioDeNascimento: MyString
+  EstadoDeNascimento: MyString
+  EstadoCivil: MyString
+  Sexo: MyString
+  LotacaoDeTrabalho: MyString
+  Cargo: MyString
+
+two:
+  Matricula: MyString
+  Nome: MyString
+  Nascimento: 2018-05-27
+  MunicipioDeNascimento: MyString
+  EstadoDeNascimento: MyString
+  EstadoCivil: MyString
+  Sexo: MyString
+  LotacaoDeTrabalho: MyString
+  Cargo: MyString

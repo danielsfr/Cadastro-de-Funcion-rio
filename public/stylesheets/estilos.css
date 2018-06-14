@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+h1{
+	text-orientation: center;
+	text-align: right;
+}
+
+fieldset{
+	width: 400px;
+    border-color: #cecece;
+    margin: center;
+}
+legend{
+    color: #888888;
+    font-weight: bold;
+    font-size: 13pt;
+    font-family: sans-serif;
+    text-align: left;
+}

@@ -1,0 +1,53 @@
+
+<fieldset id="topo" ><legend><h3>Pesquisar</h3></legend>
+ <center>
+    <%= form_tag(rhs_path, :method => :get) do %>
+    <%= text_field_tag 'search', nil,placeholder: 'Busca por nome ou matrícula', :size => 40%>
+      <%= submit_tag "Search"%>
+    <% end %>
+
+    <%= link_to 'Cadastrar Pessoa', new_rh_path %></fieldset>
+ </center>
+ 
+
+ <fieldset id="media">
+    <center>
+     <table>
+
+      <thead>
+       <tr>       
+          <th>Nome</th>
+          <th>Matrícula </th>
+          <th>Nascimento</th>     
+          <th>Sexo</th>
+          <th>Lotação de Trabalho</th>
+          <th>Cargo</th>
+          <th>Ações</th>
+          <th></th>
+          <th></th>
+          <th></th>
+       </tr>
+      </thead>
+       <tbody>
+        <% @rhs.each do |rh| %>
+          <tr>          
+            <td><%= rh.Nome %></td>
+            <td><%= rh.Matricula %></td>
+            <td><%= rh.Nascimento %></td>    
+            <td><%= rh.Sexo %></td>
+            <td><%= rh.LotacaoDeTrabalho %></td>
+            <td><%= rh.Cargo %></td>
+            <td><%= link_to 'Mostar', rh %></td>
+            <td><%= link_to 'Editar', edit_rh_path(rh) %></td>
+            <td><%= link_to 'Deletar', rh, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+       </tbody>
+      </table>
+     </center>
+ </fieldset>
+
+ 
+
+
+

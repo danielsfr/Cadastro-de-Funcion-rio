@@ -1,0 +1,63 @@
+<%= form_for(@rh) do |f| %>
+  <% if @rh.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rh.errors.count, "error") %> prohibited this rh from being saved:</h2>
+
+      <ul>
+      <% @rh.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">*
+    <%= f.label :Matricula  %>:
+    <%= f.number_field :Matricula,placeholder:"Digite a matrícula", :size => 5  %>
+  
+    <%= f.label :Nome %>:
+    <%= f.text_field :Nome, placeholder:"Digite o nome", :size => 35   %>
+
+    Data de
+    <%= f.label :Nascimento %>:
+    <%= f.date_field :Nascimento %>
+  </div> 
+
+  <div class="field">
+    *<%= f.label :Telefone %>:
+    <%= f.text_field :Telefone,placeholder:"Digite o telefone", :size =>15 %>
+ 
+    *<%= f.label :Celular %>:
+    <%= f.text_field :Celular,placeholder:"Digite o celular", :size => 15 %>
+  
+    *<%= f.label :Email %>:
+    <%= f.text_field :Email,placeholder:"Digite o email", :size => 54 %>
+  </div>
+  <div class="field">
+    <%= f.label :Município_De_Nascimento %>:
+    <%= f.text_field :MunicipioDeNascimento,placeholder:"Digite a municipio de nascimento", :size => 21 %>
+  
+    <%= f.label :Estado_De_Nascimento %>:
+    <%= f.text_field :EstadoDeNascimento,placeholder:"Digite o estado de nascimento", :size => 20 %>
+  
+    <%= f.label :Estado_Civil %>:
+    <%= f.select :EstadoCivil,['Solteiro(a)','Casado(a)','Divorciado(a)'] %>
+  </div>
+  <div class="field">
+    <%= f.label :Sexo %>:
+    <%= f.select :Sexo, ['Masculino','Feminino','Não Informado'] %>
+ 
+    *<%= f.label :Lotação_De_Trabalho %>:
+    <%= f.select :LotacaoDeTrabalho, ['','Área Sul','Área Norte','Área Leste','Área Oeste','1º Batalhão','2º Batalhão','3º Batalhão','4º Batalhão','Via Dultra','Comitiva do Anel','Guarita'] %>
+  
+    *<%= f.label :Cargo %>:
+    <%= f.select :Cargo, ['','Programador','Suporte','Guarda','Tesoureiro','Camareira','Soldado','Gerente','Supervisor','Administrativo'] %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  (*) Campo Obrigatório
+  
+<% end %>
+
